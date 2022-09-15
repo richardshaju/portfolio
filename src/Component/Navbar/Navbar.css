@@ -1,0 +1,36 @@
+.navbar {
+color: #fff;
+background-color: #000;
+    align-items: center;
+    height: 70px;
+}
+
+.right {
+
+    float: left;
+    padding: 20px;
+    right: 3px;
+    position: fixed;
+    padding-top: 25px;
+}
+.name{
+    padding-left: 14px;
+    font-size: 28px;
+}
+.left {
+
+    float: left;
+    padding: 14px;
+
+}
+
+.navbar li {
+    list-style: none;
+    padding-right: 2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.navbar ul {
+    display: flex;
+}
