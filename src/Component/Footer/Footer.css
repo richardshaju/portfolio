@@ -35,11 +35,11 @@
     }
 }
 
-.fab {
-    padding-right: 20px;
-    color: #fff;
-}
 
 .fab:hover {
     color: rgb(145, 144, 143);
+}
+.footer i{
+    padding-right: 20px;
+    color: #fff;
 }

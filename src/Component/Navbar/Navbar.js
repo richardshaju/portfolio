@@ -5,10 +5,13 @@ function Navbar() {
         <div className='navbar'>
             <nav>
                 <div className='left'>
-                    <h2 className='name'>Richard Shaju</h2>
+                    <h2 className='name'><span style={{color:'red'}}>R</span>ichard Shaju</h2>
                 </div>
                 <div className='right'>
                     <ul>
+                         <li>
+                            <p>Home</p>
+                        </li>
                         <li>
                             <p>About</p>
                         </li>
