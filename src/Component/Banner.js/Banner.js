@@ -7,10 +7,7 @@ function Banner() {
                 
             </div>
 
-            <div className='content'>
-
-            </div>
-            <div className='fade-bottom'></div>
+         
         </div>
     )
 }

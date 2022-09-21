@@ -1,12 +1,14 @@
 .banner{
     background-image: url(./lap.jpg);
     background-position-x: center;
-    display: flex;
     flex-direction: column;
+    object-fit:cover;
     background-size: cover;
     height: 630px;
     color: white;
 }
+
+
 .fade{
     height: 630px;
     background: rgba(0, 0, 0, 0.8) 

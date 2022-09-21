@@ -1,6 +1,6 @@
 .navbar {
-color: #fff;
-background-color: transparent;
+    color: #fff;
+    background-color: transparent;
     align-items: center;
     height: 70px;
     position: fixed;
@@ -8,13 +8,24 @@ background-color: transparent;
 }
 
 .right {
-
     float: left;
     padding: 20px;
     right: 3px;
     position: fixed;
     padding-top: 25px;
 }
+@media screen and (max-width: 580px) {
+    .right {
+     
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .right {
+     
+    }
+}
+
 .name{
     padding-left: 14px;
     font-size: 28px;
@@ -31,8 +42,33 @@ background-color: transparent;
     padding-right: 2rem;
     font-weight: 500;
     font-size: 1.1rem;
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar li {
+        padding-right: 1rem;
+        display: flex;
+    }
 }
 
 .navbar ul {
     display: flex;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.navbar li p {
+    display: inline-flex;
+    align-items: center;
+}
+@media screen and (max-width: 750px) {
+    .navbar li p{
+        display: none;
+    }
 }
