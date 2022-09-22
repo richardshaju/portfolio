@@ -1,10 +1,10 @@
 .navbar {
     color: #fff;
-    background-color: transparent;
     align-items: center;
     height: 70px;
     position: fixed;
     width: 100%;
+    transition: 0.5s;
 }
 
 .right {
@@ -14,22 +14,33 @@
     position: fixed;
     padding-top: 25px;
 }
-@media screen and (max-width: 580px) {
-    .right {
-     
+@media screen and (max-width: 460px) {
+    .right span{
+        font-size: 20px;
     }
 }
 
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 460px) {
     .right {
-     
+     padding: unset;
+     padding-top: 20px;
     }
 }
+
+
 
 .name{
     padding-left: 14px;
     font-size: 28px;
 }
+@media screen and (max-width: 460px) {
+    .name {
+        padding-left: 4px;
+        font-size: 20px;
+    }
+}
+
 .left {
 
     float: left;
@@ -51,7 +62,12 @@
         display: flex;
     }
 }
-
+@media screen and (max-width: 460px) {
+    .navbar li {
+        padding-right: 0.6rem;
+        display: flex;
+    }
+}
 .navbar ul {
     display: flex;
 }

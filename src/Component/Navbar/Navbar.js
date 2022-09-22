@@ -1,8 +1,20 @@
-import React from 'react'
+import React , { useState, useEffect } from 'react'
 import './Navbar.css'
 function Navbar() {
+    const [color, setColor] = useState('');
+
+    const listenScrollEvent = () => {
+       if (window.scrollY > 100) {
+          setColor('rgba(0, 0, 0, 10');
+       } else {
+          setColor('');
+       }
+    };
+    useEffect(() => {
+       window.addEventListener('scroll', listenScrollEvent);
+    })
     return (
-        <div className='navbar'>
+        <div className='navbar' style={{backgroundColor:color}}>
             <nav>
                 <div className='left'>
                     <h2 className='name'><span style={{ color: 'red' }}>R</span>ichard Shaju</h2>

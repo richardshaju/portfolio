@@ -1,5 +1,5 @@
 .about{
-    height: 475px;
+    height: auto;
     color: white;
     background-color: rgb(0, 0, 0);
 }
@@ -16,7 +16,7 @@
     }
 }
 
-.title-about{
+.title{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,16 +25,16 @@
     font-size: 2rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.title-about span{
+.title span{
     font-size: 2rem;
 }
 .content{
-    padding: 38px 230px 20px;
+    padding: 37px 150px 20px;
     font-size: 20px;
 }
 @media screen and (max-width: 1000px) {
     .content{
-        padding: 39px 117px 20px;
+        padding: 39px 60px 20px;
         font-size: 20px;
     }
 }
@@ -45,8 +45,19 @@
     }
 }
 .content p {
-    font-family: none;
-    font-size: 1.3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19px;
+}
+@media screen and (max-width: 660px) {
+    .content p{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 660px) {
+    .content{
+        padding: 39px 20px 20px;
+        font-size: 10px;
+    }
 }
 .icons{
     display: flex;
@@ -66,7 +77,7 @@
 }
 .icons svg{
     padding-right: 2rem;
-    width:50px;
+    width:38px;
      height:50px;
 }
 @media screen and (max-width: 1200px) {
@@ -75,8 +86,8 @@
     }
 }
 .icons img{
-    width: 50px;
-    height: 50px;
+    
+    height: 38px;
     border-radius: 1rem;
     margin-right: 2rem;
 }

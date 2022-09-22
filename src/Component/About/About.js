@@ -4,7 +4,7 @@ function About() {
   return (
 
     <div className='about'>
-      <h1 className='title-about'><span class="material-symbols-outlined ">person</span>About</h1>
+      <h1 className='title'><span class="material-symbols-outlined ">person</span>About</h1>
       <div className='content'>
         <p>I'm a Self-Taught  <span style={{ color: 'red' }}>MERN Stack Developer</span> , highly self-motivated and passionate about learning new things. Moreover, I'm a Tech enthusiast. <br />
           <br /> My dream is to make web apps which converts complex works into simple and  thereby to save the precious time. <br />
