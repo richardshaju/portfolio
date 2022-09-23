@@ -13,6 +13,7 @@
     align-items: center;
     align-content: center;
     padding: 20px 0px;
+    margin-bottom: 2rem;
 }
 
 @media screen and (max-width:790px) {
@@ -63,7 +64,6 @@
     align-items: center;
     font-size: 17px;
     justify-content: center;
-    font-family: cursive;
     transition: 0.3s;
 }
 @media screen and (max-width:917px) {
@@ -81,16 +81,33 @@
 
 .item-title i{
     font-size: 18px;
+    position: absolute;
+    right: 1rem;
 }
 @media screen and (max-width:374px) {
     .item-title i{
         font-size:14px;
+        position: absolute;
+        right: 1rem;
     }
 }
 @media screen and (max-width:374px) {
     .cart{
         width: 17.1rem;
-        margin-left: 1px;
+        margin-left:33px;
+    }
+}
+@media screen and (max-width:340px) {
+    .cart{
+        width: 17.1rem;
+        margin-left: 33px;
+
+    }
+}
+@media screen and (max-width:320px) {
+    .cart{
+        width: 17.1rem;
+        margin-left: 23px;
     }
 }
 @media screen and (max-width:374px) {

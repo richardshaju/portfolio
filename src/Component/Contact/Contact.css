@@ -42,7 +42,7 @@
     color: #ffff;
     background-color: #040404;
     border-style: solid;
-    border-color: #101010;
+    border-color:#382d2d;
     margin-right: 1rem;
     margin-top: 1rem;
 }
@@ -73,7 +73,7 @@
     color: #ffff;
     background-color: #040404;
     border-style: solid;
-    border-color: #101010;
+    border-color: #382d2d;
     margin-bottom: 1rem;
     margin-right: 1rem;
 }
@@ -86,7 +86,7 @@
     background-color: #040404;
     border-style: solid;
     margin-right: 1rem;
-    border-color: #101010;
+    border-color: #382d2d;
 }
 
 @media screen and (max-width:586px) {

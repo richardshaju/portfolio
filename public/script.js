@@ -1,39 +1,44 @@
-//* Materialize jQuery *//
+jQuery(function($) {
 
-$(document).ready(() => {
-    $('.sidenav').sidenav({
-       'preventScrolling': false,
-       onOpenEnd: () => {
-          $(".home__profile-intro").css("opacity", "0");
+   // MAD-RIPPLE // (jQ+CSS)
+   $(document).on("mousedown", "[data-ripple]", function(e) {
+     
+     var $self = $(this);
+     
+     if($self.is(".btn-disabled")) {
+       return;
+     }
+     if($self.closest("[data-ripple]")) {
+       e.stopPropagation();
+     }
+     
+     var initPos = $self.css("position"),
+         offs = $self.offset(),
+         x = e.pageX - offs.left,
+         y = e.pageY - offs.top,
+         dia = Math.min(this.offsetHeight, this.offsetWidth, 100), // start diameter
+         $ripple = $('<div/>', {class : "ripple",appendTo : $self });
+     
+     if(!initPos || initPos==="static") {
+       $self.css({position:"relative"});
+     }
+     
+     $('<div/>', {
+       class : "rippleWave",
+       css : {
+         background: $self.data("ripple"),
+         width: dia,
+         height: dia,
+         left: x - (dia/2),
+         top: y - (dia/2),
        },
-       onCloseStart: () => {
-          $(".home__profile-intro").css("opacity", "1");
+       appendTo : $ripple,
+       one : {
+         animationend : function(){
+           $ripple.remove();
+         }
        }
-    });
-    $('.fixed-action-btn').floatingActionButton({
-       'direction': 'bottom',
-       'hoverEnabled': false,
-    });
-    $('.carousel').carousel({
-       'indicators': true,
-       'shift': 70,
-       'dist': -50,
-       'padding': 60,
-    });
-    $('.carousel').carousel('set', 3);
-    $('.scrollspy').scrollSpy({
-       'scrollOffset': 0,
-    });
+     });
+   });
+ 
  });
- 
- 
- //* Custom jQuery *//
- 
- // To show sideBar like popUp on startUp
- setTimeout(() => {
-    $('#slide-out').addClass('sidenav-fixed');
- }, 1000);
- setTimeout(() => {
-    $('#slide-out').removeClass('sidenav-fixed');
- }, 2300);
- 
