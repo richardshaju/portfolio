@@ -28,6 +28,10 @@ color: #fff;
     display: flex;
     justify-content: space-around;
     padding: 21px 150px 31px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 @media screen and (max-width:900px) {
     .service-images{

@@ -1,6 +1,8 @@
 import React from 'react'
 import './Footer.css'
 function Footer() {
+    var today = new Date();
+    var yyyy = today.getFullYear();
   return (
     <div className='footer'>
       <div className='name-div'>
@@ -8,7 +10,7 @@ function Footer() {
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-around' }} >
 
-        <hr style={{ width: '18%' , borderColor: 'red' }} />
+        <hr style={{ width: '18%', borderColor: 'red' }} />
       </div>
       <div className='social-media'>
         <a href="https://www.github.com/richardshaju"><i className="fab fa-github"></i></a>
@@ -17,7 +19,8 @@ function Footer() {
         <a href="https://www.instagram.com/richard_kuttikkadan"><i className="fab fa-instagram"></i></a>
       </div>
       <div className='copyright'>
-        <p>All Right Reserved | Copyright © 1999 Richard Shaju</p>
+       
+        <p>All Right Reserved | Copyright © {yyyy} Richard Shaju</p>
       </div>
     </div >
   )

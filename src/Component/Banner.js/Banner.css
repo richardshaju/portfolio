@@ -13,6 +13,7 @@
     }
 }
 
+
 .fade{
     
     padding-top: 20rem;
@@ -42,6 +43,11 @@
     padding-top: 13rem;
     font-size: 1.2rem;
     margin-left: 6rem;
+}
+@media screen and (max-width: 2072px) {
+    .banner{
+        font-size: 1.7rem;
+    }
 }
 @media screen and (max-width: 1000px) {
     .bio{

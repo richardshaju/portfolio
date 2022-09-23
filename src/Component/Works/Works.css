@@ -4,56 +4,109 @@
     height: auto;
     width: 100%;
 }
-.works-display{
+
+.works-display {
     display: flex;
     flex-direction: row;
     height: auto;
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    padding: 70px 0px;
+    padding: 20px 0px;
 }
+
 @media screen and (max-width:790px) {
-    .works-display{
+    .works-display {
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
+        padding: unset;
     }
 }
-.item img{
+
+.item img {
     width: 25rem;
     height: auto;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
+
 @media screen and (max-width:917px) {
-    .item img{
-    width: 21rem;
+    .item img {
+        width: 21rem;
     }
 }
+
 @media screen and (max-width:790px) {
-    .item img{
-      margin-top: 2rem;
+    .item img {
+        margin-top: 2rem;
     }
 }
+
 @media screen and (max-width:374px) {
-    .item img{
+    .item img {
         width: 17rem;
     }
 }
-.carousel {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 400px;
-    -webkit-perspective: 500px;
-    perspective: 500px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-}
-.works__carousel .carousel-item {
+
+.item-title {
+    position: absolute;
+    margin-top: -40px;
+    background: rgb(22 22 22 / 84%);
+    width: 25.1rem;
+    height: 2.3rem;
+    margin-left: -1px;
     display: flex;
-    justify-content: center
-    
+    align-items: center;
+    font-size: 17px;
+    justify-content: center;
+    font-family: cursive;
+    transition: 0.3s;
+}
+@media screen and (max-width:917px) {
+    .item-title {
+        width: 21rem;
+        margin-left: 2px;
+    }
+}
+@media screen and (max-width:374px) {
+    .item-title {
+        font-size:14px;
+    }
+}
+
+
+.item-title i{
+    font-size: 18px;
+}
+@media screen and (max-width:374px) {
+    .item-title i{
+        font-size:14px;
+    }
+}
+@media screen and (max-width:374px) {
+    .cart{
+        width: 17.1rem;
+        margin-left: 1px;
+    }
+}
+@media screen and (max-width:374px) {
+    .netflix{
+        width: 17rem;
+      
+    }
+}
+
+.item-title a {
+    right: 1rem;
+    position: inherit;
+}
+
+.item-title:hover {
+    background: #161616;
 }
 
 .works__carousel .carousel-item--img {
@@ -61,42 +114,10 @@
     border-radius: .2rem
 }
 
-.works__carousel .carousel-item--title {
-    visibility: hidden;
-    font-family: "Exo 2", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: transparent;
-    width: 370px;
-    height: 0;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 0 .15rem .15rem;
-    overflow: hidden;
-    cursor: default;
-    transition-duration: 500ms
-}
-
-
-
-.works__carousel .carousel-item:hover>.carousel-item--title {
-    visibility: visible;
-    height: 40px;
-    background-color: rgba(20, 20, 20, .8);
-    color: #ff0000
-}
-
-.works__carousel .carousel-item:hover>.carousel-item--title:hover {
-    background-color: rgba(20, 20, 20, .96)
-}
-
-.works__carousel .carousel-item:hover>.carousel-item--title .link-icon {
-    color: #c8c8c8
-}
-
-.works__carousel .carousel-item:hover>.carousel-item--title .link-icon:hover {
-    color: #646464
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }

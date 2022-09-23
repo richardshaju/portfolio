@@ -8,7 +8,7 @@ function Banner() {
                 <h2>Richard Shaju</h2>
                 <h2>MERN Stack Developer</h2>
             </div>
-            <div className='fade'>
+            <div className='fade' id='about'>
                 
             </div>
 

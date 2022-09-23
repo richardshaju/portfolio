@@ -20,6 +20,10 @@
     padding-top: 9px;
     justify-content: center;
     padding-left: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .copyright {
