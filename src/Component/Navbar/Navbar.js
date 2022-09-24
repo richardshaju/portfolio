@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Navbar.css'
 function Navbar() {
+
     const [color, setColor] = useState('');
 
     const listenScrollEvent = () => {
@@ -25,27 +26,27 @@ function Navbar() {
                     <ul>
                         <li>
                             <a href="#home">
-                                <span class="material-symbols-outlined">home</span><p>Home</p>
+                                <span className="material-symbols-outlined">home</span><p>Home</p>
                                 </a>
                         </li>
                         <li>
                             <a href="#about">
-                            <span class="material-symbols-outlined">person</span><p>About</p>
+                            <span className="material-symbols-outlined">person</span><p>About</p>
                             </a>
                         </li>
                         <li>
                             <a href="#service">
-                            <span class="material-symbols-outlined">design_services</span><p>Service</p>
+                            <span className="material-symbols-outlined">design_services</span><p>Service</p>
                             </a>
                         </li>
                         <li>
                         <a href="#works">
-                            <span class="material-symbols-outlined">home_repair_service</span><p>Works</p>
+                            <span className="material-symbols-outlined">home_repair_service</span><p>Works</p>
                             </a>
                         </li>
                         <li>
                             <a href="#contact">
-                            <span class="material-symbols-outlined">mail</span><p>Contact</p>
+                            <span className="material-symbols-outlined">mail</span><p>Contact</p>
                             </a>
                         </li>
                     </ul>

@@ -60,7 +60,18 @@
 
     }
 }
-
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 1000px rgb(0, 0, 0) inset !important;
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+}
+.top-row input:focus{
+    background: transparent;
+}
 .top-row input:focus-visible {
     border-color: red;
     outline: none;

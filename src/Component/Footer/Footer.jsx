@@ -3,6 +3,9 @@ import './Footer.css'
 function Footer() {
     var today = new Date();
     var yyyy = today.getFullYear();
+    
+
+   
   return (
     <div className='footer'>
       <div className='name-div'>

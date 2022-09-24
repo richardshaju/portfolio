@@ -2,8 +2,8 @@ import React from 'react'
 import './Works.css'
 function Works() {
   return (
-    <div className='work' id='works'>
-      <h1 className='title'><span class="material-symbols-outlined ">home_repair_service</span>Works</h1>
+    <section className='work' id='works'>
+      <h1 className='title'><span className="material-symbols-outlined ">home_repair_service</span>Works</h1>
       <div className='content'>
         <p>Following are my previous works : </p>
       </div>
@@ -37,7 +37,7 @@ function Works() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

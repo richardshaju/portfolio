@@ -2,8 +2,8 @@ import React from 'react'
 import './Service.css'
 function Service() {
   return (
-    <div className='service'>
-        <h1 className='title'><span class="material-symbols-outlined ">design_services</span>Services</h1>
+    <section className='service' id='sevice'>
+        <h1 className='title'><span className="material-symbols-outlined ">design_services</span>Services</h1>
         <div className='content'>
           <p>I am focusing on <b> MERN Stack Web development </b>. On my learning path, I acquired skills in <b> HTML, CSS/SCSS, JavaScript, ReactJS, NodeJs,and Git </b>. Following these basic subjects, I made a good understanding of other dependent frameworks and libraries
              like <b> Axios, Handlebars, JQuery, Bootstrap, Rest API</b> and also database knowledge in <b> MongoDB & Firebase</b>.</p>
@@ -22,7 +22,7 @@ function Service() {
               </a>
           </div>
         </div>
-    </div>
+    </section>
   )
 }
 

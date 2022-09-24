@@ -8,16 +8,19 @@ import Works from './Component/Works/Works';
 
 
 function App() {
+
   return (
-    <div className="App" id='home' style={{background:'#0000'}}>
+    <div className="App" id='home' style={{ background: '#0000' }}>
       <Navbar />
       <Banner />
       <About />
       <Service />
       <Works />
-      <Contact/>
+      <Contact />
       <Footer />
-    </div>
+      
+    </div> 
+
   );
 }
 
