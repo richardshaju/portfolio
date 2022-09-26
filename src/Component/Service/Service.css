@@ -1,4 +1,4 @@
-.service{
+.service-page{
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     height: auto;
@@ -32,6 +32,13 @@ color: #fff;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: transform .5s;
+}
+.service-images img:hover{
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.03);
+
 }
 @media screen and (max-width:900px) {
     .service-images{
@@ -101,7 +108,5 @@ color: #fff;
     border-bottom: 2px solid red;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }*/
-
-
 
 

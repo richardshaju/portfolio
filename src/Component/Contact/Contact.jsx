@@ -19,7 +19,7 @@ function Contact() {
       .catch(err => console.log(err))
   }
   return (
-    <section className='contact' id='contact'>
+    <section className='contact-page' id='contact'>
       <h1 className='title'><span className="material-symbols-outlined ">mail</span>Contact</h1>
       <div className='form'>
         <form ref={formRef} onSubmit={handleSubmit} name="google-sheet">

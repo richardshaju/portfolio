@@ -2,21 +2,18 @@ import React from 'react'
 import './Works.css'
 function Works() {
   return (
-    <section className='work' id='works'>
+    <section className='work-page' id='work'>
       <h1 className='title'><span className="material-symbols-outlined ">home_repair_service</span>Works</h1>
       <div className='content'>
         <p>Following are my previous works : </p>
       </div>
       <div className='works-display' >
-
         <div className='item' style={{ textAlign: 'center' }}>
           <img src={require('./Capture.JPG')} alt="" />
-          <a class="link-icon" href="https://maxcart.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-          <div class="item-title cart">
+          <a className="link-icon" href="https://maxcart.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+          <div className="item-title cart">
             <span>Shopping Website</span>
-           
-              <i class="fa fa-external-link" aria-hidden="true"></i>
-            
+              <i className="fa fa-external-link" aria-hidden="true"></i>
           </div>
           </a>
           <p style={{ paddingTop: '0.6rem' }}>

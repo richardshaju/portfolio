@@ -1,15 +1,15 @@
-.about{
+.about-page{
     height: auto;
     color: white;
     background-color: rgb(0, 0, 0);
 }
 @media screen and (max-width: 1150px) {
-    .about {
+    .about-page {
         height: auto;
     }
 }
 @media screen and (max-width: 500px) {
-    .about{
+    .about-page{
         height: auto;
         color: white;
         background-color: rgb(0, 0, 0);

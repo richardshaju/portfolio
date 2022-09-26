@@ -2,7 +2,9 @@ import React from 'react'
 import './Service.css'
 function Service() {
   return (
-    <section className='service' id='sevice'>
+
+    
+    <section className='service-page' id='service'>
         <h1 className='title'><span className="material-symbols-outlined ">design_services</span>Services</h1>
         <div className='content'>
           <p>I am focusing on <b> MERN Stack Web development </b>. On my learning path, I acquired skills in <b> HTML, CSS/SCSS, JavaScript, ReactJS, NodeJs,and Git </b>. Following these basic subjects, I made a good understanding of other dependent frameworks and libraries
@@ -21,6 +23,7 @@ function Service() {
               <h2 className='caption'>Web Applications</h2>
               </a>
           </div>
+
         </div>
     </section>
   )

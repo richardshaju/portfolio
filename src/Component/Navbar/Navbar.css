@@ -92,3 +92,11 @@
         display: none;
     }
 }
+
+.active{
+    color: red;
+    font-weight: 700;
+}
+nav a:hover{
+    color: red;
+}

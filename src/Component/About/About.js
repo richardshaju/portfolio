@@ -2,7 +2,7 @@ import React from 'react'
 import './About.css'
 function About() {
   return (
-    <section className='about' id='about'>
+    <section className='about-page' id='about'>
       <h1 className='title'><span className="material-symbols-outlined ">person</span>About</h1>
       <div className='content' >
         <p>I'm a Self-Taught  <span style={{ color: 'red' }}>MERN Stack Developer</span> , highly self-motivated and passionate about learning new things. Moreover, I'm a Tech enthusiast. <br />
