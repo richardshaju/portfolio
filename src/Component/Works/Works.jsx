@@ -11,27 +11,39 @@ function Works() {
         <div className='item' style={{ textAlign: 'center' }}>
           <img src={require('./Capture.JPG')} alt="" />
           <a className="link-icon" href="https://maxcart.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-          <div className="item-title cart">
-            <span>Shopping Website</span>
+            <div className="item-title cart">
+              <span>Shopping Website</span>
               <i className="fa fa-external-link" aria-hidden="true"></i>
-          </div>
+            </div>
           </a>
           <p style={{ paddingTop: '0.6rem' }}>
             Front-end : <b>Html,Css,Javascript</b> <br />Back-end : <b>NodeJS</b> <br />Data Base : <b>MongoDB</b> <br />FrameWorks : <b>Handlebars,ExpressJS,Bootstrap</b> </p>
         </div>
+
         <div className='item' style={{ textAlign: 'center' }}>
           <img src={require('./netflix.JPG')} alt="" />
           <a class="link-icon" href="https://richardshaju.github.io/netflix/" target="_blank" rel="noopener noreferrer">
-          <div class="item-title netflix">
-            <span>Netflix-Clone</span>
-            
+            <div class="item-title netflix">
+              <span>Netflix-Clone</span>
               <i class="fa fa-external-link" aria-hidden="true" ></i>
-            
-          </div>
+            </div>
           </a>
-          <p style={{ paddingTop: '0.6rem'}}>
+          <p style={{ paddingTop: '0.6rem' }}>
             Front-end : <b>React,Css,Javascript</b> <br />Back-end : <b>Nill</b> <br />API used : <b>TMDB</b> <br />FrameWorks : <b>ReactJS</b>
           </p>
+        </div>
+      </div>
+      <div className='works-display' style={{ marginBottom: '2rem' }} >
+        <div className='item' style={{ textAlign: 'center' }}>
+          <img src={require('./weeknd.JPG')} alt="" />
+          <a className="link-icon" href="https://richardshaju.github.io/weeknd/" target="_blank" rel="noopener noreferrer">
+            <div className="item-title cart">
+              <span>Weeknd Music Player</span>
+              <i className="fa fa-external-link" aria-hidden="true"></i>
+            </div>
+          </a>
+          <p style={{ paddingTop: '0.6rem' }}>
+            Front-end : <b>Html,Css,Javascript</b>  </p>
         </div>
       </div>
     </section>

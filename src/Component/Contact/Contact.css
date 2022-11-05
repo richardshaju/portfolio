@@ -36,6 +36,10 @@
     }
 }
 
+input{
+    padding: 0px 5px;
+}
+
 .top-row input {
     height: 35px;
     width: 225px;

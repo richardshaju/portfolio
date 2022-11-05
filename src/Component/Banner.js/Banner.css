@@ -26,14 +26,16 @@
     }
 }@media screen and (max-width: 800px) {
     .fade{
-        padding-top: unset;
+        
         height:57px;
+        padding-top: 0.1rem;
         background-image: linear-gradient(180deg,transparent,rgb(0 0 0 / 0%),#000);
     }
 }
 @media screen and (max-width: 400px) {
     .fade{
-        height: 66px;
+        height: 76px;
+        padding-top: 0.1rem;
         background-image: linear-gradient(180deg,transparent,rgb(0 0 0 / 0%),#000);
     }
 }
