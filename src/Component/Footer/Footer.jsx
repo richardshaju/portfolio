@@ -23,7 +23,7 @@ function Footer() {
       </div>
       <div className='copyright'>
        
-        <p> <a href="/portfolio/license">All Right Reserved</a> | Copyright © {yyyy} Richard Shaju</p>
+        <p> <a href="/license">All Right Reserved</a> | Copyright © {yyyy} Richard Shaju</p>
       </div>
     </div >
   )
