@@ -98,14 +98,14 @@
 }
 @media screen and (max-width:340px) {
     .cart{
-        width: 17.1rem;
+        width: 15.6rem;
         margin-left: 33px;
 
     }
 }
 @media screen and (max-width:320px) {
     .cart{
-        width: 17.1rem;
+        width: 15.6rem;
         margin-left: 23px;
     }
 }

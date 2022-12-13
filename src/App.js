@@ -1,24 +1,17 @@
-import About from './Component/About/About';
-import Banner from './Component/Banner.js/Banner';
-import Contact from './Component/Contact/Contact';
-import Footer from './Component/Footer/Footer';
-import Navbar from './Component/Navbar/Navbar';
-import Service from './Component/Service/Service';
-import Works from './Component/Works/Works';
-
-
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './Home';
+import License from './License';
 function App() {
 
   return (
     <div className="App" id='home' style={{ background: '#0000' }}>
-      <Navbar />
-      <Banner />
-      <About />
-      <Service />
-      <Works />
-      <Contact />
-      <Footer />
-      
+      <Router>
+          <Routes>
+            <Route exact path="/portfolio"  element={<Home />} />
+            <Route exact path="/portfolio/license" element={<License />} />
+          </Routes>
+        </Router>
     </div> 
 
   );

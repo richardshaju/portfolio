@@ -1,0 +1,32 @@
+.license{
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+}
+
+.license img{
+    width: 50rem;
+}
+.license-parent{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 425px) {
+    .license img{
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .license img{
+        width: 16rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    .license{
+        display: flex;
+        justify-content: center;
+        height: 36rem;
+    }
+}

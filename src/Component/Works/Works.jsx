@@ -10,7 +10,7 @@ function Works() {
       <div className='works-display' >
         <div className='item' style={{ textAlign: 'center' }}>
           <img src={require('./Capture.JPG')} alt="" />
-          <a className="link-icon" href="https://maxcart.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+          <a className="link-icon" href="https://maxcart.onrender.com/" target="_blank" rel="noopener noreferrer">
             <div className="item-title cart">
               <span>Shopping Website</span>
               <i className="fa fa-external-link" aria-hidden="true"></i>
