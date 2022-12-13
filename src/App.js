@@ -5,11 +5,11 @@ import License from './License';
 function App() {
 
   return (
-    <div className="App" id='home' style={{ background: '#0000' }}>
+    <div className="App"  style={{ background: '#0000' }}>
       <Router>
           <Routes>
             <Route exact path="/portfolio"  element={<Home />} />
-            <Route exact path="/license" element={<License />} />
+            <Route  path="/license" element={<License />} />
           </Routes>
         </Router>
     </div> 

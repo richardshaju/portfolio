@@ -1,7 +1,10 @@
 import React from 'react'
 import './Footer.css'
+import { useNavigate } from 'react-router-dom'
+
 function Footer() {
     var today = new Date();
+    const navigate = useNavigate()
     var yyyy = today.getFullYear();
     
 
@@ -23,7 +26,7 @@ function Footer() {
       </div>
       <div className='copyright'>
        
-        <p> <a href="/license">All Right Reserved</a> | Copyright © {yyyy} Richard Shaju</p>
+        <p> <span href="" onClick={() => {navigate('/license') }}>All Right Reserved</span> | Copyright © {yyyy} Richard Shaju</p>
       </div>
     </div >
   )
