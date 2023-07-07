@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.63c2607a.css",
+    "main.js": "/static/js/main.df6bfa9d.js",
+    "static/js/787.9c1e953c.chunk.js": "/static/js/787.9c1e953c.chunk.js",
+    "static/media/olx.png": "/static/media/olx.883d1b421349f610b566.png",
+    "static/media/license.jpg": "/static/media/license.a410776776010d33043e.jpg",
+    "static/media/static-website.png": "/static/media/static-website.2a680f0006eab910a689.png",
+    "static/media/netflix.JPG": "/static/media/netflix.c61803c4845861d74442.JPG",
+    "static/media/webapp.png": "/static/media/webapp.c50294214b8a8cb45fb6.png",
+    "static/media/Capture.JPG": "/static/media/Capture.27918036ffa5d839ceb5.JPG",
+    "static/media/weeknd.JPG": "/static/media/weeknd.c99f255df9e75ca8a69c.JPG",
+    "static/media/lap.jpg": "/static/media/lap.502000ff04f428d58dba.jpg",
+    "index.html": "/index.html",
+    "main.63c2607a.css.map": "/static/css/main.63c2607a.css.map",
+    "main.df6bfa9d.js.map": "/static/js/main.df6bfa9d.js.map",
+    "787.9c1e953c.chunk.js.map": "/static/js/787.9c1e953c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63c2607a.css",
+    "static/js/main.df6bfa9d.js"
+  ]
+}
