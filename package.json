@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://richard.is-a.dev",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -27,5 +28,8 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
