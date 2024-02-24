@@ -1,63 +1,39 @@
 import React from "react";
-import { LampDemo } from "../components/ui/lamp";
-import { Button } from "../components/ui/moving-border";
+import Navbar from "../components/Navbar";
+import { SparklesCore } from "../components/ui/sparkles";
+
 function page() {
   return (
-    <div>
-      <LampDemo />
-      <form action="" className="rounded-none bg-black h-screen px-10 justify-center flex flex-col">
-        <div className="w-[25rem]">
+    <div className="media"  >
+    <div  className="h-[28rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
+      <Navbar onPage='Contact'/>
+      <h1 className="top-[100px] md:text-5xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
+        Contact
+      </h1>
+      <div className="top-[100px] w-[40rem] relative">
+        {/* Gradients */}
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
-        <label className="input  bg-black  border-slate-800  border-2 input-bordered flex items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="#ffff"
-            className="w-4 h-4 opacity-70"
-          >
-            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
-          </svg>
+        {/* Core component */}
+        <SparklesCore
+          background="transparent"
+          minSize={0.4}
+          maxSize={1}
+          particleDensity={500}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
 
-          <input type="text" className="grow " placeholder="Name" />
-        </label>
-        <label className="input input-bordered flex items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            className="w-4 h-4 opacity-70"
-          >
-            <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
-            <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
-          </svg>
-          <input type="email" className="grow" placeholder="Email" />
-        </label>
-        <label className="input input-bordered flex items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4 opacity-70"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-            <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-          </svg>
-
-          <input type="text" className="grow" placeholder="Address" />
-        </label>
-        <textarea
-          className="textarea textarea-bordered"
-          placeholder="Bio"
-        ></textarea>
-        </div>
-        <Button
-        borderRadius="1.75rem"
-        className="bg-black  text-white border-neutral-200"
-      >
-        Send
-      </Button>
-      </form>
+        {/* Radial Gradient to prevent sharp edges */}
+        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+      </div>
     </div>
+
+   
+  </div>
   );
 }
 

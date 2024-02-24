@@ -1,27 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { FiExternalLink } from "react-icons/fi";
 import { SparklesCore } from "../components/ui/sparkles";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Loading from "../components/Loading";
+
 const page = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    // Clear the timeout when the component unmounts or when the dependency changes
+    return () => clearTimeout(timer);
+  }, []); // Empty dependency array means this effect will run once after the first render
+
   const [isInfoClicked, setisInfoClicked] = useState(false);
   return (
     <div className="projects">
-      <div className="h-[28rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
-        <ul className="menu menu-horizontal menu-xs md:menu-md font-semibold  bg-[#323232]  text-white rounded-box relative">
-          <li className="hover:bg-white hover:text-black rounded-box ">
-            <Link href="/projects">PROJECTS</Link>
-          </li>
-          <li className="hover:bg-white hover:text-black rounded-box ">
-            <Link href="/media">MEDIA</Link>
-          </li>
-          <li className="hover:bg-white hover:text-black rounded-box ">
-            <Link href="/contact">CONTACT</Link>
-          </li>
-        </ul>
+      {loading ? <Loading /> : null}
+      <div className="h-[28rem] w-full relative bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
+        <Navbar onPage="Projects" />
         <h1 className="top-[100px] md:text-5xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
           Projects
         </h1>
