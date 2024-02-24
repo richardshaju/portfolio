@@ -2,7 +2,7 @@ import React from "react";
 import { SparklesCore } from "../components/ui/sparkles";
 import Navbar from "../components/Navbar";
 import { media } from "@/utils/media";
-function page() {
+function Page() {
   return (
     <div className="media">
       <div className="h-[28rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
@@ -34,7 +34,7 @@ function page() {
       <div className=' flex py-6  justify-center  bg-black text-white ' >
         <div className=" w-3/4
          md:w-1/2 ">
-        <p>I'm a Self-Taught  <span style={{ color: '#189ce8' }}>MERN Stack Developer</span> , highly self-motivated and passionate about learning new things. Moreover, I'm a Tech enthusiast.</p>
+        <p>I&#39;m a Self-Taught  <span style={{ color: '#189ce8' }}>MERN Stack Developer</span> , highly self-motivated and passionate about learning new things. Moreover, I&#39;m a Tech enthusiast.</p>
         Checkout my handles to know more😃
         </div>
       </div>
@@ -69,4 +69,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

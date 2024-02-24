@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { SparklesCore } from "../components/ui/sparkles";
 
-function page() {
+function Page() {
   return (
     <div className="media"  >
     <div  className="h-[28rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
@@ -37,4 +37,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

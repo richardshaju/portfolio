@@ -9,7 +9,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Loading from "../components/Loading";
 
-const page = () => {
+const Page = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -253,4 +253,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
