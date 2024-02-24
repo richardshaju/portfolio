@@ -1,8 +1,7 @@
 import React from "react";
 import { SparklesCore } from "../components/ui/sparkles";
 import Navbar from "../components/Navbar";
-import { FaGithub } from "react-icons/fa";
-
+import { media } from "@/utils/media";
 function page() {
   return (
     <div className="media">
@@ -32,54 +31,40 @@ function page() {
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
       </div>
-      <div className="bg-black h-full pb-10 align-middle justify-items-center px-0 md:px-16 rounded-none grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:gap-x-4 gap-y-6">
-        <div className="flex flex-row max-h-[15rem] max-w-[26rem] gap-4 border border-white text-white">
-          <div className="p-3 flex items-center">
-            <FaGithub size="4rem" />
-          </div>
-          <div className="flex flex-col p-3">
-            Github <br /> @richardshaju
-            <p>My Coding Arena | Super active</p>
-          </div>
-        </div>
-        <div className="flex flex-row max-h-[15rem] max-w-[26rem] gap-4 border border-white text-white">
-          <div className="p-3 flex items-center">
-            <FaGithub size="4rem" />
-          </div>
-          <div className="flex flex-col p-3">
-            Github <br /> @richardshaju
-            <p>My Coding Arena | Super active</p>
-          </div>
-        </div>
-        <div className="flex flex-row max-h-[15rem] max-w-[26rem] gap-4 border border-white text-white">
-          <div className="p-3 flex items-center">
-            <FaGithub size="4rem" />
-          </div>
-          <div className="flex flex-col p-3">
-            Github <br /> @richardshaju
-            <p>My Coding Arena | Super active</p>
-          </div>
-        </div>
-        <div className="flex flex-row max-h-[15rem] max-w-[26rem] gap-4 border border-white text-white">
-          <div className="p-3 flex items-center">
-            <FaGithub size="4rem" />
-          </div>
-          <div className="flex flex-col p-3">
-            Github <br /> @richardshaju
-            <p>My Coding Arena | Super active</p>
-          </div>
-        </div>
-        <div className="flex flex-row max-h-[15rem] max-w-[26rem] gap-4 border border-white text-white">
-          <div className="p-3 flex items-center">
-            <FaGithub size="4rem" />
-          </div>
-          <div className="flex flex-col p-3">
-            Github <br /> @richardshaju
-            <p>My Coding Arena | Super active</p>
-          </div>
+      <div className=' flex py-6  justify-center  bg-black text-white ' >
+        <div className=" w-3/4
+         md:w-1/2 ">
+        <p>I'm a Self-Taught  <span style={{ color: '#189ce8' }}>MERN Stack Developer</span> , highly self-motivated and passionate about learning new things. Moreover, I'm a Tech enthusiast.</p>
+        Checkout my handles to know more😃
         </div>
       </div>
-      {/* github linkdin fiver x instagram, telegram, youtube, meduim  */}
+      <div className="bg-black h-full pb-10 align-middle justify-items-center px-0 md:px-16 rounded-none grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:gap-x-4 gap-y-6">
+        {media.map((item, index) => {
+          let Icon = item.logo;
+          return (
+            <a key={index} href={item.link} target="_blank" >
+              <div className="flex hover:border-[#189ce8] hover:scale-105 rounded-2xl md:duration-200 ease-linear flex-row max-h-[8rem] overflow-hidden max-w-[23rem] border-2 border-white text-white">
+                <div className="w-[20rem] flex">
+                  <div className="p-3 flex flex-col justify-center items-center">
+                    <Icon size="4rem" />
+                  </div>
+                  <div className="flex flex-col p-3 ">
+                    <p className="font-semibold">
+                      {item.title} <br />
+                    </p>
+                    <p className="text-sm text-slate-200">@{item.id}</p>
+                    <p className="pt-2">
+                      • {item.desp}
+                      <br />• {item.active}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+      {/*     instagram, telegram, youtube, meduim  */}
     </div>
   );
 }
