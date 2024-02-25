@@ -83,8 +83,8 @@ function Page() {
               required
               className="focus:bg-black focus:border-[#1c96e7a5]  focus:outline-none border-2 border-solid border-slate-800 bg-black  text-white p-2 rounded-md w-ful font-sans"
               placeholder="Your message..."
-              cols="30"
-              rows="10"
+              cols={30}
+              rows={10}
             ></textarea>
             <div className="text-center">
             <input type="submit" className="cursor-pointer rounded-lg hover:border-[#1c96e7a5] border-2 border-slate-800  border-solid w-1/2 mt-5 p-2" />
