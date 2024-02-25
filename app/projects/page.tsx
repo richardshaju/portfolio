@@ -14,11 +14,10 @@ const Page = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 1000);
 
-    // Clear the timeout when the component unmounts or when the dependency changes
     return () => clearTimeout(timer);
-  }, []); // Empty dependency array means this effect will run once after the first render
+  }, []); 
 
   const [isInfoClicked, setisInfoClicked] = useState(false);
   return (
@@ -26,7 +25,7 @@ const Page = () => {
       {loading ? <Loading /> : null}
       <div className="h-[28rem] w-full relative bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
         <Navbar onPage="Projects" />
-        <h1 className="top-[100px] md:text-5xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
+        <h1 className="top-[100px] md:text-5xl text-5xl lg:text-7xl font-bold text-center text-white relative z-20">
           Projects
         </h1>
         <div className="top-[100px] w-[40rem] relative">
@@ -51,7 +50,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="bg-black h-full align-middle justify-items-center px-0 md:px-16 rounded-none grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:gap-x-4 gap-y-6">
+      <div className="bg-black top-[-44px] pb-16 relative h-full align-middle justify-items-center px-4 md:px-16 rounded-none grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:gap-x-4 gap-y-6">
         <div className="flex flex-col max-h-[19rem] max-w-[26rem]  gap-4 ">
           <div
             className={`rounded-2xl bg-black aspect-video overflow-hidden ${

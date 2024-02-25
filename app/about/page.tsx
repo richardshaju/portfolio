@@ -1,13 +1,26 @@
-import React from "react";
+"use client"
+import React,{useState,useEffect} from "react"; 
 import { SparklesCore } from "../components/ui/sparkles";
 import Navbar from "../components/Navbar";
 import { media } from "@/utils/media";
+import Loading from "../components/Loading";
+
+
 function Page() {
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+  
+      return () => clearTimeout(timer);
+    }, []); 
   return (
     <div className="media">
-      <div className="h-[28rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
+      {loading ? <Loading /> : null}
+      <div className="h-[28rem] w-full  bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
         <Navbar onPage="About" />
-        <h1 className="top-[100px] md:text-5xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
+        <h1 className="top-[100px]  md:text-5xl text-5xl lg:text-7xl font-bold text-center text-white relative z-20">
           About
         </h1>
         <div className="top-[100px] w-[40rem] relative">
@@ -31,7 +44,8 @@ function Page() {
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
       </div>
-      <div className=' flex py-6  justify-center  bg-black text-white ' >
+      
+      <div className= 'flex pb-10 md:py-6  justify-center  bg-black text-white ' >
         <div className=" w-3/4
          md:w-1/2 ">
         <p>I&#39;m a Self-Taught  <span style={{ color: '#189ce8' }}>MERN Stack Developer</span> , highly self-motivated and passionate about learning new things. Moreover, I&#39;m a Tech enthusiast.</p>
