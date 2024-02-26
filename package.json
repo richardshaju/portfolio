@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "set PORT=3006 && react-scripts start",
     "lint": "next lint"
   },
   "dependencies": {

@@ -1,11 +1,32 @@
-"use client"
-import React,{useState,useEffect} from "react";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import { SparklesCore } from "../components/ui/sparkles";
 import { Button, MovingBorder } from "../components/ui/moving-border";
 import Loading from "../components/Loading";
 
 function Page() {
+  const [spin, setSpin] = useState(false);
+  const formRef: React.RefObject<HTMLFormElement> = useRef(null);
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbyMCABi35HKv3MkXy5ja_4VPuQBrDrGV4dTDKMVUEo-iUGh82CU54qD1bZmR8t2Jyfj/exec";
+
+  const handleSubmit = (e:any) => {
+    e.preventDefault();
+    setSpin(true);
+    fetch(scriptUrl, {
+      method: "POST",
+      credentials: "include",
+      mode: "cors",
+      body: new FormData(formRef.current!)
+    })
+      .then((res) => {
+        setSpin(false);
+        console.log(res);
+        alert("Form Submited Successfully");
+      })
+      .catch((err) => console.log(err));
+  };
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -13,7 +34,7 @@ function Page() {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []); 
+  }, []);
   return (
     <div className="media">
       {loading ? <Loading /> : null}
@@ -44,8 +65,11 @@ function Page() {
         </div>
       </div>
       <div className="bg-black h-screen text-white flex flex-col items-center">
-        
-        <form action="" className=" w-3/4 md:w-1/3 ">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className=" w-3/4 md:w-1/3 "
+        >
           <div className="flex flex-col  ">
             <label htmlFor="" className="text-sm ml-1 mb-1">
               Name
@@ -55,6 +79,7 @@ function Page() {
               required
               className="focus:bg-blsck focus:border-[rgba(28,150,231,0.65)]  focus:outline-none border-2 border-solid border-slate-800 bg-black  text-white p-2 rounded-md w-ful font-sans"
               placeholder="Name"
+              name="name"
             />
             <label htmlFor="" className="text-sm ml-1 mb-1 mt-4">
               Email
@@ -64,6 +89,7 @@ function Page() {
               required
               className="focus:bg-balck focus:border-[#1c96e7a5]  focus:outline-none border-2 border-solid border-slate-800 bg-black  text-white p-2 rounded-md w-ful font-sans"
               placeholder="Email"
+              name="email"
             />
             <label htmlFor="" className="text-sm ml-1 mb-1 mt-4">
               Address
@@ -73,6 +99,7 @@ function Page() {
               required
               className="focus:bg-balck focus:border-[#1c96e7a5]  focus:outline-none border-2 border-solid border-slate-800 bg-black  text-white p-2 rounded-md w-ful font-sans"
               placeholder="Address"
+              name="address"
             />
             <label htmlFor="" className="text-sm ml-1 mb-1 mt-4">
               Message
@@ -87,7 +114,13 @@ function Page() {
               rows={10}
             ></textarea>
             <div className="text-center">
-            <input type="submit" className="cursor-pointer rounded-lg hover:border-[#1c96e7a5] border-2 border-slate-800  border-solid w-1/2 mt-5 p-2" />
+            {loading ? <Loading/> : (
+              <input
+                type="submit"
+                className="cursor-pointer rounded-lg hover:border-[#1c96e7a5] border-2 border-slate-800  border-solid w-1/2 mt-5 p-2"
+              />
+              )
+            }
             </div>
           </div>
         </form>

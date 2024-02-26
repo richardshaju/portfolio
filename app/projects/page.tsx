@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Loading from "../components/Loading";
-
+import { projects } from "@/utils/projects";
 const Page = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -51,7 +51,10 @@ const Page = () => {
       </div>
 
       <div className="bg-black top-[-44px] pb-16 relative h-full align-middle justify-items-center px-4 md:px-16 rounded-none grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:gap-x-4 gap-y-6">
-        <div className="flex flex-col max-h-[19rem] max-w-[26rem]  gap-4 ">
+          {projects.map((item, index)=>{
+            let Desp = item.desp
+            return(
+        <div key={index} className="flex flex-col max-h-[19rem] max-w-[26rem]  gap-4 ">
           <div
             className={`rounded-2xl bg-black aspect-video overflow-hidden ${
               isInfoClicked ? "" : `md:hover:scale-105`
@@ -62,14 +65,8 @@ const Page = () => {
                 style={{ opacity: isInfoClicked ? 1 : 0 }}
                 className={`text-white p-12 absolute inset-0 opacity-0 transition-opacity duration-1000 ease-linear  bg-black bg-opacity-50 backdrop-blur-sm`}
               >
-                <h4>Netflix Clone</h4>
-                <p>
-                  Back-end : <b>Nill</b> <br />
-                  API used : <b>TMDB</b> <br />
-                  FrameWorks : <b>ReactJS</b>
-                  <br />
-                  Front-end : <b>React,Css,Javascript</b> <br />
-                </p>
+                <h4>{item.name}</h4>
+                <Desp/>
               </div>
             ) : (
               ""
@@ -78,7 +75,7 @@ const Page = () => {
               height="100"
               width="600"
               alt="project images"
-              src="/images/netflix.png"
+              src={item.img}
               className=" transition-transform hover:-translate-y-[40%]  hover:duration-1000 ease-linear"
             />
           </div>
@@ -89,12 +86,12 @@ const Page = () => {
               size="1.3rem"
             />
             <Link
-              href=""
+              href={item.link}
               className="text-slate-600 hover:text-white flex items-center justify-center"
             >
-              Neflix Clone <FiExternalLink />
+              {item.name} <FiExternalLink />
             </Link>
-            <a href="https://www.google.com" target="_blank">
+            <a href={item.github} target="_blank">
               <FaGithub
                 className="cursor-pointer text-slate-600 hover:text-white"
                 size="1.3rem"
@@ -102,151 +99,9 @@ const Page = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col max-h-[19rem] max-w-[26rem] gap-4 ">
-          <div className="bg-black  aspect-video overflow-hidden md:hover:scale-105 md:duration-200 ">
-            <Image
-              height="100"
-              width="600"
-              alt="project images"
-              src="/images/netflix.png"
-              className=" transition-transform hover:-translate-y-[40%]  hover:duration-1000 ease-linear"
-            />
-          </div>
-          <div className="flex justify-between text-white">
-            <IoMdInformationCircleOutline
-              className="cursor-pointer text-slate-600 hover:text-white"
-              size="1.3rem"
-            />
-            <Link
-              href=""
-              className="text-slate-600 hover:text-white flex items-center justify-center"
-            >
-              Neflix Clone <FiExternalLink />
-            </Link>
-            <a href="https://www.google.com" target="_blank">
-              <FaGithub
-                className="cursor-pointer text-slate-600 hover:text-white"
-                size="1.3rem"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col max-h-[19rem] max-w-[26rem] gap-4 ">
-          <div className="bg-black  aspect-video overflow-hidden md:hover:scale-105 md:duration-200 ">
-            <Image
-              height="100"
-              width="600"
-              alt="project images"
-              src="/images/netflix.png"
-              className=" transition-transform hover:-translate-y-[40%]  hover:duration-1000 ease-linear"
-            />
-          </div>
-          <div className="flex justify-between text-white">
-            <IoMdInformationCircleOutline
-              className="cursor-pointer text-slate-600 hover:text-white"
-              size="1.3rem"
-            />
-            <Link
-              href=""
-              className="text-slate-600 hover:text-white flex items-center justify-center"
-            >
-              Neflix Clone <FiExternalLink />
-            </Link>
-            <a href="https://www.google.com" target="_blank">
-              <FaGithub
-                className="cursor-pointer text-slate-600 hover:text-white"
-                size="1.3rem"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col max-h-[19rem] max-w-[26rem] gap-4 ">
-          <div className="bg-black  aspect-video overflow-hidden md:hover:scale-105 md:duration-200 ">
-            <Image
-              height="100"
-              width="600"
-              alt="project images"
-              src="/images/netflix.png"
-              className=" transition-transform hover:-translate-y-[40%]  hover:duration-1000 ease-linear"
-            />
-          </div>
-          <div className="flex justify-between text-white">
-            <IoMdInformationCircleOutline
-              className="cursor-pointer text-slate-600 hover:text-white"
-              size="1.3rem"
-            />
-            <Link
-              href=""
-              className="text-slate-600 hover:text-white flex items-center justify-center"
-            >
-              Neflix Clone <FiExternalLink />
-            </Link>
-            <a href="https://www.google.com" target="_blank">
-              <FaGithub
-                className="cursor-pointer text-slate-600 hover:text-white"
-                size="1.3rem"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col max-h-[19rem] max-w-[26rem] gap-4 ">
-          <div className="bg-black  aspect-video overflow-hidden md:hover:scale-105 md:duration-200 ">
-            <Image
-              height="100"
-              width="600"
-              alt="project images"
-              src="/images/netflix.png"
-              className=" transition-transform hover:-translate-y-[40%]  hover:duration-1000 ease-linear"
-            />
-          </div>
-          <div className="flex justify-between text-white">
-            <IoMdInformationCircleOutline
-              className="cursor-pointer text-slate-600 hover:text-white"
-              size="1.3rem"
-            />
-            <Link
-              href=""
-              className="text-slate-600 hover:text-white flex items-center justify-center"
-            >
-              Neflix Clone <FiExternalLink />
-            </Link>
-            <a href="https://www.google.com" target="_blank">
-              <FaGithub
-                className="cursor-pointer text-slate-600 hover:text-white"
-                size="1.3rem"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col max-h-[19rem] max-w-[26rem] gap-4 ">
-          <div className="bg-black  aspect-video overflow-hidden md:hover:scale-105 md:duration-200 ">
-            <Image
-              height="100"
-              width="600"
-              alt="project images"
-              src="/images/netflix.png"
-              className=" transition-transform hover:-translate-y-[40%]  hover:duration-1000 ease-linear"
-            />
-          </div>
-          <div className="flex justify-between text-white">
-            <IoMdInformationCircleOutline
-              className="cursor-pointer text-slate-600 hover:text-white"
-              size="1.3rem"
-            />
-            <Link
-              href=""
-              className="text-slate-600 hover:text-white flex items-center justify-center"
-            >
-              Neflix Clone <FiExternalLink />
-            </Link>
-            <a href="https://www.google.com" target="_blank">
-              <FaGithub
-                className="cursor-pointer text-slate-600 hover:text-white"
-                size="1.3rem"
-              />
-            </a>
-          </div>
-        </div>
+            )
+          })}
+        
       </div>
     </div>
   );

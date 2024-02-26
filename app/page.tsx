@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import { useEffect,useState } from "react";
 import Loading from "./components/Loading";
 
-
 export default function Home() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
