@@ -19,7 +19,16 @@ const Page = () => {
     return () => clearTimeout(timer);
   }, []); 
 
-  const [isInfoClicked, setisInfoClicked] = useState(false);
+  const [infoClickedIndexes, setInfoClickedIndexes]:any = useState([]);
+
+  const toggleInfoClicked = (index:any) => {
+    if (infoClickedIndexes.includes(index)) {
+      setInfoClickedIndexes(infoClickedIndexes.filter((i:any) => i !== index));
+    } else {
+      setInfoClickedIndexes([...infoClickedIndexes, index]);
+    }
+  };
+
   return (
     <div className="projects bg-black">
       {loading ? <Loading /> : null}
@@ -52,6 +61,7 @@ const Page = () => {
 
       <div className="bg-black top-[-44px] pb-16 relative h-full align-middle justify-items-center px-4 md:px-16 rounded-none grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:gap-x-4 gap-y-6">
           {projects.map((item, index)=>{
+            const isInfoClicked = infoClickedIndexes.includes(index);
             let Desp = item.desp
             return(
         <div key={index} className="flex flex-col max-h-[19rem] max-w-[26rem]  gap-4 ">
@@ -81,12 +91,14 @@ const Page = () => {
           </div>
           <div className="flex justify-between text-white">
             <IoMdInformationCircleOutline
-              onClick={() => setisInfoClicked(!isInfoClicked)}
+              key={index}
+              onClick={() => toggleInfoClicked(index)}
               className="cursor-pointer text-slate-600 hover:text-white"
               size="1.3rem"
             />
             <Link
               href={item.link}
+              target="_blank"
               className="text-slate-600 hover:text-white flex items-center justify-center"
             >
               {item.name} <FiExternalLink />

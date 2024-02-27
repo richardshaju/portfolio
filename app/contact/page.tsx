@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { SparklesCore } from "../components/ui/sparkles";
 import { Button, MovingBorder } from "../components/ui/moving-border";
 import Loading from "../components/Loading";
+import Spin from "../components/Spin";
 
 function Page() {
   const [spin, setSpin] = useState(false);
@@ -21,11 +22,13 @@ function Page() {
       body: new FormData(formRef.current!)
     })
       .then((res) => {
-        setSpin(false);
         console.log(res);
-        alert("Form Submited Successfully");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => {
+        alert("Form Submited Successfully");
+        setSpin(false);
+  })
   };
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -114,7 +117,7 @@ function Page() {
               rows={10}
             ></textarea>
             <div className="text-center">
-            {loading ? <Loading/> : (
+            {spin ? <Spin/> : (
               <input
                 type="submit"
                 className="cursor-pointer rounded-lg hover:border-[#1c96e7a5] border-2 border-slate-800  border-solid w-1/2 mt-5 p-2"
