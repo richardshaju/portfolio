@@ -21,7 +21,7 @@ const Page = () => {
 
   const [isInfoClicked, setisInfoClicked] = useState(false);
   return (
-    <div className="projects">
+    <div className="projects bg-black">
       {loading ? <Loading /> : null}
       <div className="h-[28rem] w-full relative bg-black flex flex-col items-center justify-center overflow-hidden rounded-none">
         <Navbar onPage="Projects" />

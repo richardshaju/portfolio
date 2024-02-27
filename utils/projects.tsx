@@ -3,7 +3,7 @@ import netflixImage from '../public/images/netflix.png';
 import cartImage from '../public/images/cart.jpg';
 
 
-function Netflix() {
+export function Netflix() {
   return (
     <div>
       <p>
@@ -16,7 +16,21 @@ function Netflix() {
     </div>
   );
 }
-export default Netflix;
+
+
+
+export function OlxClone() {
+  return (
+    <div>
+      <p style={{ paddingTop: "0.6rem" }}>
+            Front-end : <b>React JS</b> <br />
+            Back-end : <b>Firebase</b>
+          </p>
+    </div>
+  )
+}
+
+
 
 export const projects = [
   {
