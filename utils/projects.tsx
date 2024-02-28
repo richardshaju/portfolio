@@ -6,6 +6,7 @@ import olxImage from '../public/images/olx.jpg';
 import carImage from '../public/images/car.jpg';
 import weekImage from '../public/images/week.jpg';
 import irImage from '../public/images/ir.jpg';
+import portFolio from '../public/images/portfolio.jpg';
 
 
 export function Cart() {
@@ -93,6 +94,17 @@ export function ImageRec() {
     </div>
   )
 }
+export function Portfolio() {
+  return (
+    <div>
+   <p style={{ paddingTop: "0.6rem" }}>
+            Front-end : <b>Next.js</b> <br />
+            Library : <b>Tailwind, Aceternity</b>
+            <br />
+          </p>
+    </div>
+  )
+}
 
 
 
@@ -147,6 +159,14 @@ export const projects = [
     link: "http://ec2-13-48-45-183.eu-north-1.compute.amazonaws.com/",
     github: "https://github.com/richardshaju/Image-recognizer",
     desp:ImageRec,
+  },
+  
+  {
+    name: "Portfolio",
+    img: portFolio,
+    link: "https://richard.is-a.dev/",
+    github: "https://github.com/richardshaju",
+    desp:Portfolio,
   },
   
 ];
