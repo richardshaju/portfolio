@@ -17,13 +17,13 @@ const Page = () => {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []); 
+  }, []);
 
-  const [infoClickedIndexes, setInfoClickedIndexes]:any = useState([]);
+  const [infoClickedIndexes, setInfoClickedIndexes]: any = useState([]);
 
-  const toggleInfoClicked = (index:any) => {
+  const toggleInfoClicked = (index: any) => {
     if (infoClickedIndexes.includes(index)) {
-      setInfoClickedIndexes(infoClickedIndexes.filter((i:any) => i !== index));
+      setInfoClickedIndexes(infoClickedIndexes.filter((i: any) => i !== index));
     } else {
       setInfoClickedIndexes([...infoClickedIndexes, index]);
     }
@@ -60,60 +60,64 @@ const Page = () => {
       </div>
 
       <div className="bg-black top-[-44px] pb-16 relative h-full align-middle justify-items-center px-4 md:px-16 rounded-none grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:gap-x-4 gap-y-6">
-          {projects.map((item, index)=>{
-            const isInfoClicked = infoClickedIndexes.includes(index);
-            let Desp = item.desp
-            return(
-        <div key={index} className="flex flex-col max-h-[19rem] max-w-[26rem]  gap-4 ">
-          <div
-            className={`rounded-2xl bg-black aspect-video overflow-hidden ${
-              isInfoClicked ? "" : `md:hover:scale-105`
-            }  md:duration-200 relative`}
-          >
-            {isInfoClicked ? (
-              <div
-                style={{ opacity: isInfoClicked ? 1 : 0 }}
-                className={`text-white p-12 absolute inset-0 opacity-0 transition-opacity duration-1000 ease-linear  bg-black bg-opacity-50 backdrop-blur-sm`}
-              >
-                <h4>{item.name}</h4>
-                <Desp/>
-              </div>
-            ) : (
-              ""
-            )}
-            <Image
-              height="100"
-              width="600"
-              alt="project images"
-              src={item.img}
-              className=" transition-transform hover:-translate-y-[40%]  hover:duration-1000 ease-linear"
-            />
-          </div>
-          <div className="flex justify-between text-white">
-            <IoMdInformationCircleOutline
+        {projects.map((item, index) => {
+          const isInfoClicked = infoClickedIndexes.includes(index);
+          let Desp = item.desp;
+          return (
+            <div
               key={index}
-              onClick={() => toggleInfoClicked(index)}
-              className="cursor-pointer text-slate-600 hover:text-white"
-              size="1.3rem"
-            />
-            <Link
-              href={item.link}
-              target="_blank"
-              className="text-slate-600 hover:text-white flex items-center justify-center"
+              className="flex flex-col max-h-[19rem] max-w-[26rem]  gap-4 "
             >
-              {item.name} <FiExternalLink />
-            </Link>
-            <a href={item.github} target="_blank">
-              <FaGithub
-                className="cursor-pointer text-slate-600 hover:text-white"
-                size="1.3rem"
-              />
-            </a>
-          </div>
-        </div>
-            )
-          })}
-        
+              <div
+                className={`rounded-2xl bg-black aspect-video overflow-hidden ${
+                  isInfoClicked ? "" : `md:hover:scale-105`
+                }  md:duration-200 relative`}
+              >
+                {isInfoClicked ? (
+                  <div
+                    style={{ opacity: isInfoClicked ? 1 : 0 }}
+                    className={`text-white p-12 absolute inset-0 opacity-0 transition-opacity duration-1000 ease-linear  bg-black bg-opacity-50 backdrop-blur-sm`}
+                  >
+                    <h4>{item.name}</h4>
+                    <Desp />
+                  </div>
+                ) : (
+                  ""
+                )}
+                <Image
+                  height="100"
+                  width="600"
+                  alt="project images"
+                  src={item.img}
+                  className=" transition-transform hover:-translate-y-[40%]  hover:duration-1000 ease-linear"
+                />
+              </div>
+              <div className="flex justify-between text-white">
+                <IoMdInformationCircleOutline
+                  key={index}
+                  onClick={() => toggleInfoClicked(index)}
+                  className="cursor-pointer text-slate-600 hover:text-white"
+                  size="1.3rem"
+                />
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  className="text-slate-600 hover:text-white flex items-center justify-center"
+                >
+                  {item.name} <FiExternalLink />
+                </Link>
+                { item.github &&
+                  <a href={item.github} target="_blank">
+                  <FaGithub
+                    className="cursor-pointer text-slate-600 hover:text-white"
+                    size="1.3rem"
+                    />
+                </a>
+                  }
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

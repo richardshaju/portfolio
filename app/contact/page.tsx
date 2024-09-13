@@ -20,7 +20,7 @@ function Page() {
       credentials: "include",
       mode: "cors",
       body: new FormData(formRef.current!)
-    })
+    })  
       .then((res) => {
         console.log(res);
       })
