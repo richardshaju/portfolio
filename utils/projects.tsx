@@ -9,6 +9,8 @@ import sarojImage from "../public/images/saroj.png";
 import weekImage from "../public/images/week.jpg";
 import irImage from "../public/images/ir.jpg";
 import portFolio from "../public/images/portfolio.jpg";
+import eventImage from "../public/images/eventsatucek.jpg";
+import legacyImage from "../public/images/legacy.jpg";
 
 export function Cart() {
   return (
@@ -79,6 +81,24 @@ export function Uck() {
     </div>
   );
 }
+export function Eventsatucek() {
+  return (
+    <div>
+      <p style={{ paddingTop: "0.6rem" }}>
+        Technologies Used : <b>Next.js | Firebase</b> <br />
+      </p>
+    </div>
+  );
+}
+export function Legacy() {
+  return (
+    <div>
+      <p style={{ paddingTop: "0.6rem" }}>
+        Technologies Used : <b>Next.js | Tailwind</b> <br />
+      </p>
+    </div>
+  );
+}
 export function Saroj() {
   return (
     <div>
@@ -125,10 +145,31 @@ export function Portfolio() {
 
 export const projects = [
   {
+    name: "Events At UCEK",
+    img: eventImage,
+    link: "https://eventsatucek.vercel.app/",
+    github: "",
+    desp: Eventsatucek,
+  },
+  {
+    name: "uck.ac.in",
+    img: uckImage,
+    link: "https://uck.ac.in/",
+    github: "https://github.com/Mulearn-ucek/ucek",
+    desp: Uck,
+  },
+  {
+    name: "Legacy IEDC UCEK",
+    img: legacyImage,
+    link: "https://legacy-iedc.github.io/website/",
+    github: "",
+    desp: Legacy,
+  },
+  {
     name: "E-commerce",
     img: cartImage,
     link: "https://maxcart.onrender.com/",
-    github: "",
+    github: "https://github.com/richardshaju/maxcart",
     desp: Cart,
   },
   {
@@ -138,13 +179,7 @@ export const projects = [
     github: "https://github.com/richardshaju/used_car_price",
     desp: CarPrice,
   },
-  {
-    name: "uck.ac.in",
-    img: uckImage,
-    link: "https://uck.ac.in/",
-    github: "https://github.com/Mulearn-ucek/ucek",
-    desp: Uck,
-  },
+ 
   {
     name: "Saroj Constructions",
     img: sarojImage,
