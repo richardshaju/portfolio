@@ -45,7 +45,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <h1 className=" md:text-5xl text-3xl lg:text-5xl font-bold text-center text-white">
+          <h1 className=" md:text-5xl text-3xl lg:text-4xl font-bold text-center text-white">
             Richard Shaju
           </h1>
           <p className="text-md text-white animate-pulse">
